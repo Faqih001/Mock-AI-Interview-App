@@ -12,6 +12,7 @@ import { getCurrentUser } from "@/lib/actions/auth.action";
 
 // Feedback page component for displaying feedback on an interview 
 const Feedback = async ({ params }: RouteParams) => {
+  // Extracting the interview ID from the route parameters
   const { id } = await params;
   const user = await getCurrentUser();
 
