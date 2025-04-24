@@ -18,7 +18,7 @@ const Feedback = async ({ params }: RouteParams) => {
   // Get the current user for authentication
   const user = await getCurrentUser();
 
-  //
+  // Get the interview details by ID and check if it exists
   const interview = await getInterviewById(id);
   if (!interview) redirect("/");
 
