@@ -13,6 +13,7 @@ import DisplayTechIcons from "@/components/DisplayTechIcons";
 
 // InterviewDetails component for displaying interview details
 const InterviewDetails = async ({ params }: RouteParams) => {
+  // Extracting the interview ID from the route parameters
   const { id } = await params;
 
   const user = await getCurrentUser();
