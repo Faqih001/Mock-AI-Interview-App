@@ -14,8 +14,11 @@ import { getCurrentUser } from "@/lib/actions/auth.action";
 const Feedback = async ({ params }: RouteParams) => {
   // Extracting the interview ID from the route parameters
   const { id } = await params;
+
+  // Get the current user for authentication
   const user = await getCurrentUser();
 
+  //
   const interview = await getInterviewById(id);
   if (!interview) redirect("/");
 
