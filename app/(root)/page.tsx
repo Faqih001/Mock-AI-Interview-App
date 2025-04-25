@@ -12,6 +12,7 @@ import {
 
 // Home page component that displays user interviews and available interviews
 async function Home() {
+  // Fetch the current user and their interviews
   const user = await getCurrentUser();
 
   const [userInterviews, allInterview] = await Promise.all([
