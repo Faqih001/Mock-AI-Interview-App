@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   description: "An AI-powered platform for preparing for mock interviews",
 };
 
+// Root layout component
 export default function RootLayout({
   children,
 }: Readonly<{
