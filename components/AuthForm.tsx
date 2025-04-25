@@ -36,6 +36,8 @@ const AuthForm = ({ type }: { type: FormType }) => {
 
   // Form Schema and form
   const formSchema = authFormSchema(type);
+
+  // Form validation and submission
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
