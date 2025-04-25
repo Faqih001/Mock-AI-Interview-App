@@ -17,6 +17,7 @@ interface FormFieldProps<T extends FieldValues> {
   type?: "text" | "email" | "password";
 }
 
+// FormField component 
 const FormField = <T extends FieldValues>({
   control,
   name,
