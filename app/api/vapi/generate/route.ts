@@ -43,6 +43,7 @@ export async function POST(request: Request) {
     // Save the interview to the database collection "interviews"
     await db.collection("interviews").add(interview);
 
+    // Return a success response with the generated questions and interview details
     return Response.json({ success: true }, { status: 200 });
   } catch (error) {
     console.error("Error:", error);
