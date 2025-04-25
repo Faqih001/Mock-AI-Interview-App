@@ -31,6 +31,7 @@ const authFormSchema = (type: FormType) => {
 
 // AuthForm types 
 const AuthForm = ({ type }: { type: FormType }) => {
+  // Router and Firebase auth
   const router = useRouter();
 
   const formSchema = authFormSchema(type);
