@@ -4,6 +4,7 @@ import { Mona_Sans } from "next/font/google";
 
 import "./globals.css";
 
+// This is the root layout for the application. It wraps all pages and components.
 const monaSans = Mona_Sans({
   variable: "--font-mona-sans",
   subsets: ["latin"],
