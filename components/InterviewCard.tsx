@@ -8,6 +8,7 @@ import DisplayTechIcons from "./DisplayTechIcons";
 import { cn, getRandomInterviewCover } from "@/lib/utils";
 import { getFeedbackByInterviewId } from "@/lib/actions/general.action";
 
+// Types for the props passed to the InterviewCard component
 const InterviewCard = async ({
   interviewId,
   userId,
