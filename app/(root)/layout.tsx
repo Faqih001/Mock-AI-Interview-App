@@ -7,6 +7,7 @@ import { isAuthenticated } from "@/lib/actions/auth.action";
 
 // This is the root layout for the application. It wraps all pages and components.
 const Layout = async ({ children }: { children: ReactNode }) => {
+  // Check if the user is authenticated
   const isUserAuthenticated = await isAuthenticated();
   if (!isUserAuthenticated) redirect("/sign-in");
 
