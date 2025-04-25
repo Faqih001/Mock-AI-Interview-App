@@ -49,6 +49,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
 
   // On submit function 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    // Check if the user is signing up or signing in  
     try {
       if (type === "sign-up") {
         const { name, email, password } = data;
