@@ -29,6 +29,7 @@ const authFormSchema = (type: FormType) => {
   });
 };
 
+// AuthForm types 
 const AuthForm = ({ type }: { type: FormType }) => {
   const router = useRouter();
 
