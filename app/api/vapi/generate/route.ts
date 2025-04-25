@@ -8,6 +8,7 @@ export async function POST(request: Request) {
   // Parse the request body to get the interview details and user ID
   const { type, role, level, techstack, amount, userid } = await request.json();
 
+  // Try to generate interview questions using the AI model and save them to the database
   try {
     const { text: questions } = await generateText({
       model: google("gemini-2.0-flash-001"),
