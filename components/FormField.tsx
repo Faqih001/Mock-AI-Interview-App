@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
+// Types for the props passed to the FormField component
 interface FormFieldProps<T extends FieldValues> {
   control: Control<T>;
   name: Path<T>;
