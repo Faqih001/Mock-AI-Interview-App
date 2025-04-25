@@ -7,6 +7,7 @@ const DisplayTechIcons = async ({ techStack }: TechIconProps) => {
   // Fetch tech logos based on the tech stack 
   const techIcons = await getTechLogos(techStack);
 
+  // Return the JSX for the DisplayTechIcons component
   return (
     <div className="flex flex-row">
       {techIcons.slice(0, 3).map(({ tech, url }, index) => (
