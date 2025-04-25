@@ -37,6 +37,7 @@ const InterviewCard = async ({
       Technical: "bg-light-800",
     }[normalizedType] || "bg-light-600";
 
+  // Format the date using dayjs
   const formattedDate = dayjs(
     feedback?.createdAt || createdAt || Date.now()
   ).format("MMM D, YYYY");
