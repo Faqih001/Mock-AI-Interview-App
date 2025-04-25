@@ -17,6 +17,7 @@ const InterviewCard = async ({
   techstack,
   createdAt,
 }: InterviewCardProps) => {
+  // Fetch feedback data if userId and interviewId are provided
   const feedback =
     userId && interviewId
       ? await getFeedbackByInterviewId({
