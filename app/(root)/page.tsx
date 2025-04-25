@@ -18,7 +18,7 @@ async function Home() {
     user?.id ? getLatestInterviews({ userId: user.id }) : [],
   ]);
 
-  const hasPastInterviews = userInterviews?.length! > 0;
+  const hasPastInterviews = (userInterviews?.length ?? 0) > 0;
   const hasUpcomingInterviews = allInterview?.length! > 0;
 
   return (
