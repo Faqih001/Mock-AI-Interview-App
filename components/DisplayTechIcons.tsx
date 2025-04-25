@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { cn, getTechLogos } from "@/lib/utils";
 
+// Types for the props passed to the DisplayTechIcons component
 const DisplayTechIcons = async ({ techStack }: TechIconProps) => {
   const techIcons = await getTechLogos(techStack);
 
