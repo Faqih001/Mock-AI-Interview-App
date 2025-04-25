@@ -10,6 +10,7 @@ import {
   getLatestInterviews,
 } from "@/lib/actions/general.action";
 
+// Home page component that displays user interviews and available interviews
 async function Home() {
   const user = await getCurrentUser();
 
