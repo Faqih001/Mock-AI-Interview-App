@@ -29,6 +29,7 @@ const InterviewCard = async ({
   // Normalize the type to handle mixed types
   const normalizedType = /mix/gi.test(type) ? "Mixed" : type;
 
+  // Determine the badge color based on the normalized type
   const badgeColor =
     {
       Behavioral: "bg-light-400",
