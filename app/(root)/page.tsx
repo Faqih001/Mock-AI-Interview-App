@@ -21,6 +21,7 @@ async function Home() {
     user?.id ? getLatestInterviews({ userId: user.id }) : [],
   ]);
 
+  // Check if the user has past interviews and upcoming interviews
   const hasPastInterviews = (userInterviews?.length ?? 0) > 0;
   const hasUpcomingInterviews = (allInterview?.length ?? 0) > 0;
 
