@@ -19,7 +19,7 @@ async function Home() {
   ]);
 
   const hasPastInterviews = (userInterviews?.length ?? 0) > 0;
-  const hasUpcomingInterviews = allInterview?.length! > 0;
+  const hasUpcomingInterviews = (allInterview?.length ?? 0) > 0;
 
   return (
     <>
