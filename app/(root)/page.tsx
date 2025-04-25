@@ -15,6 +15,7 @@ async function Home() {
   // Fetch the current user and their interviews
   const user = await getCurrentUser();
 
+  // Fetch user interviews and all available interviews
   const [userInterviews, allInterview] = await Promise.all([
     user?.id ? getInterviewsByUserId(user.id) : [],
     user?.id ? getLatestInterviews({ userId: user.id }) : [],
