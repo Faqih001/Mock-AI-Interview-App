@@ -27,6 +27,7 @@ export async function POST(request: Request) {
     `,
     });
 
+    // Interview object to be saved in the database
     const interview = {
       role: role,
       type: type,
@@ -39,6 +40,7 @@ export async function POST(request: Request) {
       createdAt: new Date().toISOString(),
     };
 
+    // Save the interview to the database collection "interviews"
     await db.collection("interviews").add(interview);
 
     return Response.json({ success: true }, { status: 200 });
