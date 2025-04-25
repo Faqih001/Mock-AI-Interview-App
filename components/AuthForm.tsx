@@ -34,6 +34,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
   // Router and Firebase auth
   const router = useRouter();
 
+  // Form Schema and form
   const formSchema = authFormSchema(type);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
