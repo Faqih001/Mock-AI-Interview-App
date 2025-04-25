@@ -10,6 +10,7 @@ const monaSans = Mona_Sans({
   subsets: ["latin"],
 });
 
+// Metadata for the application 
 export const metadata: Metadata = {
   title: "PrepWise",
   description: "An AI-powered platform for preparing for mock interviews",
