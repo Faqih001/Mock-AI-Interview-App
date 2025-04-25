@@ -47,6 +47,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
     },
   });
 
+  // On submit function 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     try {
       if (type === "sign-up") {
