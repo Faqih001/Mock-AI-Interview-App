@@ -4,6 +4,7 @@ import { cn, getTechLogos } from "@/lib/utils";
 
 // Types for the props passed to the DisplayTechIcons component
 const DisplayTechIcons = async ({ techStack }: TechIconProps) => {
+  // Fetch tech logos based on the tech stack 
   const techIcons = await getTechLogos(techStack);
 
   return (
