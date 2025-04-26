@@ -99,6 +99,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
           return;
         }
 
+        // sign in action with the id token
         await signIn({
           email,
           idToken,
