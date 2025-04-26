@@ -34,6 +34,8 @@ const Agent = ({
 }: AgentProps) => {
   // Router for navigation
   const router = useRouter();
+
+  // State variables to manage call status, messages, and speaking state
   const [callStatus, setCallStatus] = useState<CallStatus>(CallStatus.INACTIVE);
   const [messages, setMessages] = useState<SavedMessage[]>([]);
   const [isSpeaking, setIsSpeaking] = useState(false);
