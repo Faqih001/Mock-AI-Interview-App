@@ -32,6 +32,7 @@ const Agent = ({
   type,
   questions,
 }: AgentProps) => {
+  // Router for navigation
   const router = useRouter();
   const [callStatus, setCallStatus] = useState<CallStatus>(CallStatus.INACTIVE);
   const [messages, setMessages] = useState<SavedMessage[]>([]);
