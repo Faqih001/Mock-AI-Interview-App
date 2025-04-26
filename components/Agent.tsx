@@ -41,6 +41,7 @@ const Agent = ({
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [lastMessage, setLastMessage] = useState<string>("");
 
+  // Effect to handle the lifecycle of the call and messages
   useEffect(() => {
     const onCallStart = () => {
       setCallStatus(CallStatus.ACTIVE);
