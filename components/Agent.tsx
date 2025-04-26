@@ -53,6 +53,7 @@ const Agent = ({
       setCallStatus(CallStatus.FINISHED);
     };
 
+    // on message event to update the messages state
     const onMessage = (message: Message) => {
       if (message.type === "transcript" && message.transcriptType === "final") {
         const newMessage = { role: message.role, content: message.transcript };
