@@ -17,6 +17,7 @@ enum CallStatus {
   FINISHED = "FINISHED",
 }
 
+// Interface to define the props for the Agent component for saved messages
 interface SavedMessage {
   role: "user" | "system" | "assistant";
   content: string;
