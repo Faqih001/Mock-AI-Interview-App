@@ -92,6 +92,8 @@ const AuthForm = ({ type }: { type: FormType }) => {
 
         // id token for the user to be used in the sign in action
         const idToken = await userCredential.user.getIdToken();
+
+        // if the id token is not available, show error message
         if (!idToken) {
           toast.error("Sign in Failed. Please try again.");
           return;
