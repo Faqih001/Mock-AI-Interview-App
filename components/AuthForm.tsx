@@ -90,6 +90,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
           password
         );
 
+        // id token for the user to be used in the sign in action
         const idToken = await userCredential.user.getIdToken();
         if (!idToken) {
           toast.error("Sign in Failed. Please try again.");
