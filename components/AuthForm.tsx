@@ -70,6 +70,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
           password,
         });
 
+        // if the result is not successful, show error message
         if (!result.success) {
           toast.error(result.message);
           return;
