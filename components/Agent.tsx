@@ -23,6 +23,7 @@ interface SavedMessage {
   content: string;
 }
 
+// Component to handle the AI Interviewer
 const Agent = ({
   userName,
   userId,
