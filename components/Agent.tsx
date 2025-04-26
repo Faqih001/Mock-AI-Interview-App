@@ -43,6 +43,7 @@ const Agent = ({
 
   // Effect to handle the lifecycle of the call and messages
   useEffect(() => {
+    // on call start and end events to update the call status
     const onCallStart = () => {
       setCallStatus(CallStatus.ACTIVE);
     };
