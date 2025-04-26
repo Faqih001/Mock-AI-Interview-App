@@ -105,6 +105,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
           idToken,
         });
 
+        // toast success message and redirect to home page
         toast.success("Signed in successfully.");
         router.push("/");
       }
