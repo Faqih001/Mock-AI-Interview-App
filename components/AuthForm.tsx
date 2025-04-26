@@ -62,6 +62,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
           password
         );
 
+        // Result of the sign up action 
         const result = await signUp({
           uid: userCredential.user.uid,
           name: name!,
