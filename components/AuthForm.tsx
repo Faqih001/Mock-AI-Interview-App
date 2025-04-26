@@ -116,6 +116,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
     }
   };
 
+  // Is sign in or sign up
   const isSignIn = type === "sign-in";
 
   return (
