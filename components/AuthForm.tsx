@@ -83,6 +83,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
         // Sign in with email and password
         const { email, password } = data;
 
+        // user credential with Firebase auth 
         const userCredential = await signInWithEmailAndPassword(
           auth,
           email,
