@@ -55,6 +55,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
         // Create user with email and password 
         const { name, email, password } = data;
 
+        // User creation with Firebase auth 
         const userCredential = await createUserWithEmailAndPassword(
           auth,
           email,
