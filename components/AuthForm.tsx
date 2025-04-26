@@ -52,6 +52,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
     // Check if the user is signing up or signing in  
     try {
       if (type === "sign-up") {
+        // Create user with email and password 
         const { name, email, password } = data;
 
         const userCredential = await createUserWithEmailAndPassword(
