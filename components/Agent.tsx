@@ -48,6 +48,7 @@ const Agent = ({
       setCallStatus(CallStatus.ACTIVE);
     };
 
+    // on call end event to update the call status 
     const onCallEnd = () => {
       setCallStatus(CallStatus.FINISHED);
     };
