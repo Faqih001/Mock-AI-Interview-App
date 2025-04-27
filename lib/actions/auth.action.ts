@@ -80,6 +80,7 @@ export async function signIn(params: SignInParams) {
 
   // Try to get user by email from Firebase Authentication
   try {
+    // User record is not needed for sign in
     const userRecord = await auth.getUserByEmail(email);
     if (!userRecord)
       return {
