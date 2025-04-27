@@ -49,6 +49,7 @@ export async function signUp(params: SignUpParams) {
       // resumeURL,
     });
 
+    // Create user in Firebase Authentication
     return {
       success: true,
       message: "Account created successfully. Please sign in.",
