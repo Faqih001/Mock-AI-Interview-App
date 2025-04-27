@@ -55,6 +55,7 @@ export async function signUp(params: SignUpParams) {
       message: "Account created successfully. Please sign in.",
     };
   } catch (error: unknown) {
+    // if error is an instance of Error, log the message
     if (error instanceof Error) {
       console.error("Error creating user:", error.message);
     } else {
