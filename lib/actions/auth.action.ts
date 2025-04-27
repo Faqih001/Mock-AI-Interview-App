@@ -82,6 +82,8 @@ export async function signIn(params: SignInParams) {
   try {
     // User record is not needed for sign in
     const userRecord = await auth.getUserByEmail(email);
+
+    // if user does not exist, return error
     if (!userRecord)
       return {
         success: false,
