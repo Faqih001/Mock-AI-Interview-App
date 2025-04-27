@@ -27,6 +27,7 @@ export async function setSessionCookie(idToken: string) {
 
 // Define types for user and authentication parameters for sign up and sign in
 export async function signUp(params: SignUpParams) {
+  // Uid, name, email, profileURL, resumeURL
   const { uid, name, email } = params;
 
   try {
