@@ -107,6 +107,7 @@ export async function signOut() {
   // Clear session cookie
   const cookieStore = await cookies();
 
+  // Set cookie to expire immediately
   cookieStore.delete("session");
 }
 
