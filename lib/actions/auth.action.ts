@@ -92,8 +92,8 @@ export async function signIn(params: SignInParams) {
 
     // Set session cookie for the user
     await setSessionCookie(idToken);
-  } catch (error: any) {
-    console.log("");
+  } catch (error: unknown) {
+    console.error("Error during sign-in:", error);
 
     return {
       success: false,
