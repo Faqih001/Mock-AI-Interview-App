@@ -7,6 +7,7 @@ function initFirebaseAdmin() {
   // getApps() returns an array of initialized apps
   const apps = getApps();
 
+  // Check if there are any initialized apps already
   if (!apps.length) {
     initializeApp({
       credential: cert({
