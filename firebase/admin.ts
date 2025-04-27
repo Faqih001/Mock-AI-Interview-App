@@ -4,6 +4,7 @@ import { getFirestore } from "firebase-admin/firestore";
 
 // Initialize Firebase Admin SDK
 function initFirebaseAdmin() {
+  // getApps() returns an array of initialized apps
   const apps = getApps();
 
   if (!apps.length) {
