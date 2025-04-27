@@ -78,6 +78,7 @@ export async function signIn(params: SignInParams) {
   // email, idToken for sign in
   const { email, idToken } = params;
 
+  // Try to get user by email from Firebase Authentication
   try {
     const userRecord = await auth.getUserByEmail(email);
     if (!userRecord)
