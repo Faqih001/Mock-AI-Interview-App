@@ -64,7 +64,11 @@ export async function signUp(params: SignUpParams) {
     console.error("Error creating user:", error);
 
     // Handle Firebase specific errors
-    if (error instanceof Error && (error as any).code === "auth/email-already-exists") {
+    interface FirebaseError extends Error {
+      code: string;
+    }
+
+    if (error instanceof Error && (error as FirebaseError).code === "auth/email-already-exists") {
       return {
         success: false,
         message: "This email is already in use",
