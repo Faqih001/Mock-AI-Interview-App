@@ -73,6 +73,7 @@ export async function signUp(params: SignUpParams) {
   }
 }
 
+// Define types for user and authentication parameters for sign up and sign in
 export async function signIn(params: SignInParams) {
   const { email, idToken } = params;
 
