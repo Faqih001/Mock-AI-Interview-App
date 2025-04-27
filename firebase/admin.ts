@@ -19,6 +19,7 @@ function initFirebaseAdmin() {
     });
   }
 
+  // Return the initialized auth and firestore instances
   return {
     auth: getAuth(),
     db: getFirestore(),
