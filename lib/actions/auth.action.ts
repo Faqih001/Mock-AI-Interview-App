@@ -33,6 +33,8 @@ export async function signUp(params: SignUpParams) {
   try {
     // check if user exists in db
     const userRecord = await db.collection("users").doc(uid).get();
+
+    // if user exists, return error
     if (userRecord.exists)
       return {
         success: false,
