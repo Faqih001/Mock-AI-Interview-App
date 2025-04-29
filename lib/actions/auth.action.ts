@@ -66,8 +66,9 @@ export async function signUp(params: SignUpParams) {
     // Handle Firebase specific errors
     interface FirebaseError extends Error {
       code: string;
-    }
+    } 
 
+    // If error is related to email already exists 
     if (error instanceof Error && (error as FirebaseError).code === "auth/email-already-exists") {
       return {
         success: false,
