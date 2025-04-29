@@ -129,6 +129,8 @@ export async function getCurrentUser(): Promise<User | null> {
 
   // Get session cookie from the cookie store
   const sessionCookie = cookieStore.get("session")?.value;
+
+  // If session cookie is not present, return null
   if (!sessionCookie) return null;
 
   try {
