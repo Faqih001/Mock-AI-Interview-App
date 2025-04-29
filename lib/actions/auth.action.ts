@@ -145,6 +145,7 @@ export async function getCurrentUser(): Promise<User | null> {
       .get();
     if (!userRecord.exists) return null;
 
+    // If user does not exist, return null
     return {
       ...userRecord.data(),
       id: userRecord.id,
