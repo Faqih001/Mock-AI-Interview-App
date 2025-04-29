@@ -124,9 +124,10 @@ export async function signOut() {
 
 // Get current user from session cookie
 export async function getCurrentUser(): Promise<User | null> {
-  // Get session cookie from the request headers
+  // Get cookie store from the request headers
   const cookieStore = await cookies();
 
+  // Get session cookie from the cookie store
   const sessionCookie = cookieStore.get("session")?.value;
   if (!sessionCookie) return null;
 
