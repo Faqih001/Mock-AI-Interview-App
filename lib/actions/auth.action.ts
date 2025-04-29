@@ -133,6 +133,7 @@ export async function getCurrentUser(): Promise<User | null> {
   // If session cookie is not present, return null
   if (!sessionCookie) return null;
 
+  // Try to verify the session cookie
   try {
     const decodedClaims = await auth.verifySessionCookie(sessionCookie, true);
 
