@@ -135,6 +135,7 @@ export async function getCurrentUser(): Promise<User | null> {
 
   // Try to verify the session cookie
   try {
+    // Verify the session cookie and decode the claims
     const decodedClaims = await auth.verifySessionCookie(sessionCookie, true);
 
     // get user info from db
