@@ -45,6 +45,7 @@ export async function createFeedback(params: CreateFeedbackParams) {
         "You are a professional interviewer analyzing a mock interview. Your task is to evaluate the candidate based on structured categories",
     });
 
+    // Feedback object is created with the following properties:
     const feedback = {
       interviewId: interviewId,
       userId: userId,
