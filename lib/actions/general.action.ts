@@ -12,6 +12,7 @@ export async function createFeedback(params: CreateFeedbackParams) {
   // InterviewId, userId, transcript, feedbackId are required parameters
   const { interviewId, userId, transcript, feedbackId } = params;
 
+  // Try to generate feedback using Google Gemini model and save it to the database
   try {
     const formattedTranscript = transcript
       .map(
