@@ -57,6 +57,7 @@ export async function createFeedback(params: CreateFeedbackParams) {
       createdAt: new Date().toISOString(),
     };
 
+    // Validate feedback object using feedbackSchema
     let feedbackRef;
 
     if (feedbackId) {
