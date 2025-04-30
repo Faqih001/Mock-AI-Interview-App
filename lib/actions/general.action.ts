@@ -22,6 +22,8 @@ export async function createFeedback(params: CreateFeedbackParams) {
       )
       .join("");
 
+    // Generate feedback using Google Gemini model and save it to the database
+    // The model is set to "gemini-2.0-flash-001" and structuredOutputs is set to false
     const { object } = await generateObject({
       model: google("gemini-2.0-flash-001", {
         structuredOutputs: false,
