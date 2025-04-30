@@ -60,6 +60,7 @@ export async function createFeedback(params: CreateFeedbackParams) {
     // Validate feedback object using feedbackSchema
     let feedbackRef;
 
+    // If feedbackId is provided, update the existing feedback document
     if (feedbackId) {
       feedbackRef = db.collection("feedback").doc(feedbackId);
     } else {
