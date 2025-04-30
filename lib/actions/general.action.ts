@@ -8,6 +8,8 @@ import { feedbackSchema } from "@/constants";
 
 // Create types for feedback and interview id
 export async function createFeedback(params: CreateFeedbackParams) {
+
+  // InterviewId, userId, transcript, feedbackId are required parameters
   const { interviewId, userId, transcript, feedbackId } = params;
 
   try {
