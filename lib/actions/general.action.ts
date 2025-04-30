@@ -14,6 +14,7 @@ export async function createFeedback(params: CreateFeedbackParams) {
 
   // Try to generate feedback using Google Gemini model and save it to the database
   try {
+    // Check if transcript is empty or not and format it
     const formattedTranscript = transcript
       .map(
         (sentence: { role: string; content: string }) =>
