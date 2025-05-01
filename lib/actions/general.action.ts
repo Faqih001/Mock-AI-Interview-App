@@ -70,6 +70,7 @@ export async function createFeedback(params: CreateFeedbackParams) {
     // Set the feedback document in the database
     await feedbackRef.set(feedback);
 
+    // If feedbackId is provided, update the existing feedback document
     return { success: true, feedbackId: feedbackRef.id };
   } catch (error) {
     console.error("Error saving feedback:", error);
