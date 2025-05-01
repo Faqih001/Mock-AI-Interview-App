@@ -78,6 +78,7 @@ export async function createFeedback(params: CreateFeedbackParams) {
   }
 }
 
+// get interview by id and check if it exists
 export async function getInterviewById(id: string): Promise<Interview | null> {
   const interview = await db.collection("interviews").doc(id).get();
 
