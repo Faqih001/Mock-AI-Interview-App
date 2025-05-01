@@ -67,6 +67,7 @@ export async function createFeedback(params: CreateFeedbackParams) {
       feedbackRef = db.collection("feedback").doc();
     }
 
+    // Set the feedback document in the database
     await feedbackRef.set(feedback);
 
     return { success: true, feedbackId: feedbackRef.id };
