@@ -87,6 +87,7 @@ export async function getInterviewById(id: string): Promise<Interview | null> {
   return interview.data() as Interview | null;
 }
 
+// get feedback by interview id and user id
 export async function getFeedbackByInterviewId(
   params: GetFeedbackByInterviewIdParams
 ): Promise<Feedback | null> {
