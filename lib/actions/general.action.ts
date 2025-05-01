@@ -83,6 +83,7 @@ export async function getInterviewById(id: string): Promise<Interview | null> {
   // interview stored in the database of Firebase by id
   const interview = await db.collection("interviews").doc(id).get();
 
+  // if interview does not exist, return null
   return interview.data() as Interview | null;
 }
 
