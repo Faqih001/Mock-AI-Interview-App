@@ -94,6 +94,7 @@ export async function getFeedbackByInterviewId(
   // interviewId and userId are required parameters
   const { interviewId, userId } = params;
 
+  // query the database for feedback by interviewId and userId
   const querySnapshot = await db
     .collection("feedback")
     .where("interviewId", "==", interviewId)
