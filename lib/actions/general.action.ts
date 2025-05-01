@@ -80,6 +80,7 @@ export async function createFeedback(params: CreateFeedbackParams) {
 
 // get interview by id and check if it exists
 export async function getInterviewById(id: string): Promise<Interview | null> {
+  // interview stored in the database of Firebase by id
   const interview = await db.collection("interviews").doc(id).get();
 
   return interview.data() as Interview | null;
