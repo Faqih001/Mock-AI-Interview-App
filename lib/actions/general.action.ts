@@ -91,6 +91,7 @@ export async function getInterviewById(id: string): Promise<Interview | null> {
 export async function getFeedbackByInterviewId(
   params: GetFeedbackByInterviewIdParams
 ): Promise<Feedback | null> {
+  // interviewId and userId are required parameters
   const { interviewId, userId } = params;
 
   const querySnapshot = await db
