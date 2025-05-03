@@ -102,6 +102,8 @@ export async function getFeedbackByInterviewId(
     .limit(1)
     .get();
 
+  // if querySnapshot is empty, return null
+  // querySnapshot is a snapshot of the database
   if (querySnapshot.empty) return null;
 
   const feedbackDoc = querySnapshot.docs[0];
