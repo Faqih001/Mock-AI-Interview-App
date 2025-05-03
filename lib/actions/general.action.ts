@@ -128,6 +128,7 @@ export async function getLatestInterviews(
     .limit(limit)
     .get();
 
+  // return the interviews as an array of Interview objects or null
   return interviews.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),
