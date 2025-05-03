@@ -139,6 +139,7 @@ export async function getLatestInterviews(
 export async function getInterviewsByUserId(
   userId: string
 ): Promise<Interview[] | null> {
+  // userId is a required parameter for this function to work
   const interviews = await db
     .collection("interviews")
     .where("userId", "==", userId)
