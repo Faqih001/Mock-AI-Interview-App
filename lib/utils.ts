@@ -49,6 +49,7 @@ export const getTechLogos = async (techArray: string[]) => {
   return results;
 };
 
+//getRandomInterviewCover is a function that returns a random interview cover image
 export const getRandomInterviewCover = () => {
   const randomIndex = Math.floor(Math.random() * interviewCovers.length);
   return `/covers${interviewCovers[randomIndex]}`;
