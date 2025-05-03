@@ -119,6 +119,7 @@ export async function getLatestInterviews(
   // userId and limit are required parameters
   const { userId, limit = 20 } = params;
 
+  // query the database for interviews by userId and limit
   const interviews = await db
     .collection("interviews")
     .orderBy("createdAt", "desc")
