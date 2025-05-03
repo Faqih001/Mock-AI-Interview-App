@@ -37,6 +37,7 @@ export const getTechLogos = async (techArray: string[]) => {
     };
   });
 
+  // results is an array of objects with tech name and URL 
   const results = await Promise.all(
     logoURLs.map(async ({ tech, url }) => ({
       tech,
