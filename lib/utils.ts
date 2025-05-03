@@ -45,6 +45,7 @@ export const getTechLogos = async (techArray: string[]) => {
     }))
   );
 
+  // return results as an array of objects with tech name and URL
   return results;
 };
 
