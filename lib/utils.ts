@@ -28,6 +28,7 @@ const checkIconExists = async (url: string) => {
 
 // getTechLogos is a function that takes an array of tech names as input
 export const getTechLogos = async (techArray: string[]) => {
+  // techArray is an array of tech names to get logos for 
   const logoURLs = techArray.map((tech) => {
     const normalized = normalizeTechName(tech);
     return {
