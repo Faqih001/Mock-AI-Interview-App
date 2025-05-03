@@ -106,6 +106,8 @@ export async function getFeedbackByInterviewId(
   // querySnapshot is a snapshot of the database
   if (querySnapshot.empty) return null;
 
+  // if querySnapshot is not empty, get the first document
+  // querySnapshot.docs is an array of documents
   const feedbackDoc = querySnapshot.docs[0];
   return { id: feedbackDoc.id, ...feedbackDoc.data() } as Feedback;
 }
