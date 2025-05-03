@@ -116,6 +116,7 @@ export async function getFeedbackByInterviewId(
 export async function getLatestInterviews(
   params: GetLatestInterviewsParams
 ): Promise<Interview[] | null> {
+  // userId and limit are required parameters
   const { userId, limit = 20 } = params;
 
   const interviews = await db
