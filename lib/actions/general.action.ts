@@ -135,6 +135,7 @@ export async function getLatestInterviews(
   })) as Interview[];
 }
 
+// get interviews by userId and limit by userId
 export async function getInterviewsByUserId(
   userId: string
 ): Promise<Interview[] | null> {
