@@ -10,6 +10,7 @@ export function cn(...inputs: ClassValue[]) {
 // techIconBaseURL is the base URL for the tech icons
 const techIconBaseURL = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
 
+// normalizeTechName is a function that takes a tech name as input
 const normalizeTechName = (tech: string) => {
   const key = tech.toLowerCase().replace(/\.js$/, "").replace(/\s+/g, "");
   return mappings[key as keyof typeof mappings];
