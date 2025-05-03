@@ -146,6 +146,7 @@ export async function getInterviewsByUserId(
     .orderBy("createdAt", "desc")
     .get();
 
+  // if interviews is empty, return null and exit the function
   return interviews.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),
